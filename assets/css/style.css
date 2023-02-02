@@ -1,0 +1,31 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.carousel-item img {
+  /* height: 60vh; */
+  object-fit: fill;
+}
+.modal-body {
+  padding: 0px !important;
+}
+#modal-close.float-end {
+  position: absolute;
+  right: 0;
+  font-size: 40px;
+  margin-top: 10px;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 350px;
+  }
+}
