@@ -14,7 +14,7 @@ function Main() {
           <div className="col-md-8 mx-auto">
             <h1 className="fw-light">Ardiente Rex</h1>
             <h4 className="fw-light">Full Stack Software Engineer</h4>
-            <p className="lead text-muted">
+            <p className="lead text-muted mt-3">
               I am a full-stack developer who specializes in Scala with
               Playframework, NodeJS, PostgreSQL/MongoDB, ReactJS, and custom
               Linux distributions for embedded and IOT devices (ie. Bitmain

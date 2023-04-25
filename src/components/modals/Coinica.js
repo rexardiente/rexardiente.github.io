@@ -47,7 +47,9 @@ function Coinica() {
               View
             </button>
           </div>
-          <small className="text-muted">{images.length} image/s</small>
+          {images.length > 1 && (
+            <small className="text-muted">{images.length} images</small>
+          )}
         </div>
       </div>
       <DialogBox

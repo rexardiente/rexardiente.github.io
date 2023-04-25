@@ -39,3 +39,7 @@
   text-align: justify;
   text-justify: inter-word;
 } */
+.row.card-body p,
+.row.card-body a {
+  font-size: 13px;
+}

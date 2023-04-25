@@ -25,25 +25,24 @@ function LKCInnovation() {
           href="https://lkcinnovation.com"
           target="_blank"
           rel="noreferrer"
-          className="small my-3"
+          className="my-1"
         >
           https://lkcinnovation.com
         </a>
-        {/*"<div className="d-flex justify-content-end my-3">
-          <small className="text-muted">Year 2020</small>
-  </div>"*/}
         <div className="d-flex justify-content-between align-items-center mt-auto mb-0">
           <div className="btn-group">
             <button
               type="button"
               className="btn btn-sm btn-outline-secondary"
               data-bs-toggle="modal"
-              data-bs-target="#enhancedGeoImages"
+              data-bs-target="#lkcInnoImages"
             >
               View
             </button>
           </div>
-          <small className="text-muted">{images.length} image/s</small>
+          {images.length > 1 && (
+            <small className="text-muted">{images.length} images</small>
+          )}
         </div>
       </div>
       <DialogBox

@@ -26,13 +26,10 @@ function EnhancedGeo() {
           href="https://enhancedgeo.com"
           target="_blank"
           rel="noreferrer"
-          className="small my-3"
+          className="my-1"
         >
           https://enhancedgeo.com
         </a>
-        {/*"<div className="d-flex justify-content-end my-3">
-          <small className="text-muted">Year 2020</small>
-  </div>"*/}
         <div className="d-flex justify-content-between align-items-center mt-auto mb-0">
           <div className="btn-group">
             <button
@@ -44,7 +41,9 @@ function EnhancedGeo() {
               View
             </button>
           </div>
-          <small className="text-muted">{images.length} image/s</small>
+          {images.length > 1 && (
+            <small className="text-muted">{images.length} images</small>
+          )}
         </div>
       </div>
       <DialogBox

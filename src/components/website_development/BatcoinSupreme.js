@@ -18,15 +18,22 @@ function BatcoinSupreme() {
         <p className="card-text">
           Batcoin Supreme ( Batcoin) is a store value digital crypto currency
           and decentralize finance in Binance Smartchain network.
-          <br />
         </p>
         <a
           href="https://www.batcoinsupreme.com"
           target="_blank"
           rel="noreferrer"
-          className="small my-3"
+          className="my-1"
         >
           https://www.batcoinsupreme.com
+        </a>
+        <a
+          href="https://bscscan.com/address/0x387F7b015D926fB3a94DCE4b86EaFBfE38e370DB#code"
+          target="_blank"
+          rel="noreferrer"
+          className="my-1"
+        >
+          Check Smart Contract
         </a>
         {/*"<div className="d-flex justify-content-end my-3">
           <small className="text-muted">Year 2020</small>
@@ -42,7 +49,10 @@ function BatcoinSupreme() {
               View
             </button>
           </div>
-          <small className="text-muted">{images.length} image/s</small>
+
+          {images.length > 1 && (
+            <small className="text-muted">{images.length} images</small>
+          )}
         </div>
       </div>
       <DialogBox
