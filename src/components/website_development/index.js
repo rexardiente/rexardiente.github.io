@@ -1,4 +1,5 @@
 import BatcoinSupreme from "./BatcoinSupreme";
 import EnhancedGeo from "./EnhancedGeo";
+import LKCInnovation from "./LKCInnovation";
 
-export { BatcoinSupreme, EnhancedGeo };
+export { LKCInnovation, BatcoinSupreme, EnhancedGeo };

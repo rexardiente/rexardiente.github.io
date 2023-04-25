@@ -39,7 +39,7 @@ function InnoMiner() {
               View
             </button>
           </div>
-          <small className="text-muted">6 images</small>
+          <small className="text-muted">{images.length} image/s</small>
         </div>
       </div>
       <DialogBox

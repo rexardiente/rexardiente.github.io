@@ -1,8 +1,8 @@
 import React from "react";
 import DialogBox from "../modals/DialogBox";
 
-function EnhancedGeo() {
-  const images = ["https://i.imgur.com/HjBFZGi.png"];
+function LKCInnovation() {
+  const images = ["https://i.imgur.com/04H2bwp.png"];
   return (
     <div className="card shadow-sm h-100">
       <img
@@ -16,19 +16,18 @@ function EnhancedGeo() {
       />
       <div className="row card-body">
         <p className="card-text">
-          Groundbreaking technology for a new source of energy. EnhancedGEO’s
-          novel technology will enable energy dense green fuel production from
-          new regions in a completely clean manner, forever changing the
-          footprint of energy production
+          Our digital savvy team focuses on growing our clients’ businesses by
+          boosting their traffic, increasing their social engagement and
+          creating efficient web experiences that people love.
           <br />
         </p>
         <a
-          href="https://enhancedgeo.com"
+          href="https://lkcinnovation.com"
           target="_blank"
           rel="noreferrer"
           className="small my-3"
         >
-          https://enhancedgeo.com
+          https://lkcinnovation.com
         </a>
         {/*"<div className="d-flex justify-content-end my-3">
           <small className="text-muted">Year 2020</small>
@@ -48,12 +47,12 @@ function EnhancedGeo() {
         </div>
       </div>
       <DialogBox
-        id="enhancedGeoImages"
+        id="lkcInnoImages"
         images={images}
-        dataBsTarget="carouselEnhancedGeo"
+        dataBsTarget="carousellkcInno"
       />
     </div>
   );
 }
 
-export default EnhancedGeo;
+export default LKCInnovation;

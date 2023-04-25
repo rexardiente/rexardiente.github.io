@@ -1,6 +1,10 @@
 import React from "react";
 import { Coinica, InnoMiner, WowooExchange, ZetaMiner } from "./modals/index";
-import { BatcoinSupreme, EnhancedGeo } from "./website_development/index";
+import {
+  BatcoinSupreme,
+  EnhancedGeo,
+  LKCInnovation,
+} from "./website_development/index";
 
 function Main() {
   return (
@@ -56,6 +60,9 @@ function Main() {
         <div className="container mt-5">
           <div className="row g-3">
             <p className="h4 text-muted">Website Development</p>
+            <div className="col-12 col-md-4 col-lg-3">
+              <LKCInnovation />
+            </div>
             <div className="col-12 col-md-4 col-lg-3">
               <BatcoinSupreme />
             </div>

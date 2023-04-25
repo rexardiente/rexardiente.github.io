@@ -42,7 +42,7 @@ function BatcoinSupreme() {
               View
             </button>
           </div>
-          <small className="text-muted">10 images</small>
+          <small className="text-muted">{images.length} image/s</small>
         </div>
       </div>
       <DialogBox
