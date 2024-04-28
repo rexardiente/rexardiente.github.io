@@ -1,5 +1,11 @@
 import React from "react";
-import { Coinica, InnoMiner, WowooExchange, ZetaMiner } from "./modals/index";
+import {
+  Blocki,
+  Coinica,
+  InnoMiner,
+  WowooExchange,
+  ZetaMiner,
+} from "./app_development/index";
 import {
   BatcoinSupreme,
   EnhancedGeo,
@@ -54,6 +60,9 @@ function Main() {
             </div>
             <div className="col-12 col-md-4 col-lg-3">
               <ZetaMiner />
+            </div>
+            <div className="col-12 col-md-4 col-lg-3">
+              <Blocki />
             </div>
           </div>
         </div>

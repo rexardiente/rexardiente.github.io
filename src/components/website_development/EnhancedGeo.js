@@ -1,5 +1,5 @@
 import React from "react";
-import DialogBox from "../modals/DialogBox";
+import DialogBox from "../app_development/DialogBox";
 
 function EnhancedGeo() {
   const images = ["https://i.imgur.com/HjBFZGi.png"];

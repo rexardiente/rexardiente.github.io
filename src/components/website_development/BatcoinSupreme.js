@@ -1,5 +1,5 @@
 import React from "react";
-import DialogBox from "../modals/DialogBox";
+import DialogBox from "../app_development/DialogBox";
 
 function BatcoinSupreme() {
   const images = ["https://i.imgur.com/X3hCJ54.png"];
