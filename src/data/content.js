@@ -62,13 +62,13 @@ export const work = [
   {
     index: '03',
     name: 'Jobvious',
-    kind: 'Recruiting Platform', // TODO: confirm exact product framing
+    kind: 'Talent Referral Platform',
     role: 'Technical Lead Developer',
     status: 'Current',
     href: 'https://itsjobvious.com',
     summary:
-      'Leading development on a recruiting and talent-acquisition platform — web and mobile clients plus the APIs and integrations behind them.', // TODO: confirm
-    stack: ['Node.js', 'React', 'Firebase', 'PostgreSQL'], // TODO: confirm stack
+      'A referral-driven hiring network where people find jobs, refer qualified talent, and earn passively. I lead development across the web, mobile, and API layers that power it.',
+    stack: ['Node.js', 'React', 'Firebase'], // TODO: confirm full stack
     featured: true,
   },
   {
