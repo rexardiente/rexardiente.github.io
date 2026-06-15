@@ -26,11 +26,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-ember opacity-60 animate-pulse-dot" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-ember" />
             </span>
-            <span className="mono-label">
-              {profile.status}
-              <span className="mx-3 text-ink-600">/</span>
-              <span className="text-ash-400">Available for select work</span>
-            </span>
+            <span className="mono-label">{profile.status}</span>
           </motion.div>
 
           {/* name */}

@@ -5,7 +5,7 @@ import { stagger, item } from './Reveal';
 
 function StatusPill({ status }) {
   const tone =
-    status === 'Live'
+    status === 'Live' || status === 'Current'
       ? 'text-ember border-ember/40'
       : status === 'Internal'
         ? 'text-ash-400 border-ink-600'

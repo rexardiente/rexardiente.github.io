@@ -9,7 +9,7 @@ export const profile = {
   firstName: 'Rex',
   lastName: 'Ardiente',
   role: 'Software Engineer & Founder',
-  status: 'Founder @ Zynlab', // shown in the live status line
+  status: 'Tech Lead @ Jobvious · Founder @ Zynlab', // shown in the live status line
   email: 'rardiente.dev@gmail.com',
   intro:
     'I design and build AI infrastructure — multi-tenant LLM platforms, retrieval-augmented systems, and the real-time services that run them.',
@@ -49,6 +49,18 @@ export const work = [
   },
   {
     index: '02',
+    name: 'Jobvious',
+    kind: 'Recruiting Platform', // TODO: confirm exact product framing
+    role: 'Technical Lead Developer',
+    status: 'Current',
+    href: 'https://itsjobvious.com',
+    summary:
+      'Leading development on a recruiting and talent-acquisition platform — web and mobile clients plus the APIs and integrations behind them.', // TODO: confirm
+    stack: ['Node.js', 'React', 'Firebase', 'PostgreSQL'], // TODO: confirm stack
+    featured: true,
+  },
+  {
+    index: '03',
     name: 'Niksen PMS',
     kind: 'Property Management System',
     role: 'Co-Founder',
@@ -60,7 +72,7 @@ export const work = [
     featured: true,
   },
   {
-    index: '03',
+    index: '04',
     name: 'Stratify Platform',
     kind: 'Multi-tenant SaaS',
     role: 'Co-Founder',
@@ -73,7 +85,7 @@ export const work = [
     featured: true,
   },
   {
-    index: '04',
+    index: '05',
     name: 'Finance App',
     kind: 'Fintech · Client Work',
     role: 'Builder',
@@ -86,7 +98,7 @@ export const work = [
     featured: true,
   },
   {
-    index: '05',
+    index: '06',
     name: 'Zyn Mission Control',
     kind: 'Internal Ops',
     role: 'Builder',
