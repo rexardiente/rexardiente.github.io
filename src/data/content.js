@@ -49,6 +49,18 @@ export const work = [
   },
   {
     index: '02',
+    name: 'Niksen',
+    kind: 'Property Management System',
+    role: 'Co-Founder',
+    status: 'Live',
+    href: 'https://niksenpms.com',
+    summary:
+      'A multi-tenant property-management platform — bookings, operations, and the services behind them — that I co-founded and run in production across a suite of API, admin, and integration services.',
+    stack: ['NestJS', 'Prisma', 'PostgreSQL', 'Qdrant', 'Multi-tenant'],
+    featured: true,
+  },
+  {
+    index: '03',
     name: 'Jobvious',
     kind: 'Recruiting Platform', // TODO: confirm exact product framing
     role: 'Technical Lead Developer',
@@ -57,18 +69,6 @@ export const work = [
     summary:
       'Leading development on a recruiting and talent-acquisition platform — web and mobile clients plus the APIs and integrations behind them.', // TODO: confirm
     stack: ['Node.js', 'React', 'Firebase', 'PostgreSQL'], // TODO: confirm stack
-    featured: true,
-  },
-  {
-    index: '03',
-    name: 'Niksen PMS',
-    kind: 'Property Management System',
-    role: 'Co-Founder',
-    status: 'Live',
-    href: 'https://niksenpms.com',
-    summary:
-      'A multi-tenant property-management platform — bookings, operations, and the services behind them — that I co-founded and run in production across a suite of API, admin, and integration services.',
-    stack: ['NestJS', 'Prisma', 'PostgreSQL', 'Qdrant', 'Multi-tenant'],
     featured: true,
   },
   {
