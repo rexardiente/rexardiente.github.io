@@ -22,7 +22,7 @@ export const profile = {
 
 export const about = {
   body: [
-    'I started in backend and systems engineering — Scala and Play, Node.js, PostgreSQL, and custom Linux distributions for cryptocurrency mining hardware. The kind of work where things either run on real machines or they don’t.',
+    'I’m driven to build technology people can depend on. From my earliest work close to the hardware, I learned that the best systems are the ones you never have to think about — they just work.',
     'That foundation now points at AI infrastructure. I build platforms that put large language models into production: multi-tenant APIs, retrieval-augmented generation, real-time voice, and the metering, billing, and tenancy underneath them.',
     'I work end to end — architecture, backend, and the interfaces on top — but I’m happiest close to the systems layer, where correctness and scale actually live.',
   ],
