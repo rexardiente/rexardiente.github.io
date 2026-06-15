@@ -2,17 +2,196 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+@layer base {
+  /* ── Dark theme (default) ───────────────────────────────────────────── */
+  :root {
+    --ink-950: 8 8 10;
+    --ink-900: 12 12 15;
+    --ink-850: 17 17 20;
+    --ink-800: 22 22 27;
+    --ink-700: 29 29 35;
+    --ink-600: 38 38 46;
+
+    --ash-400: 108 108 120;
+    --ash-300: 138 138 150;
+    --ash-200: 169 169 180;
+    --ash-100: 214 214 221;
+
+    --ember: 255 106 43;
+    --ember-bright: 255 125 68;
+    --ember-deep: 224 72 26;
+    --ember-glow: 255 138 77;
+
+    /* atmosphere */
+    --glow-rgb: 255 106 43; /* radial ember glow */
+    --glow-strength: 0.16;
+    --grid-rgb: 255 255 255;
+    --grid-alpha: 0.025;
+    --grain-opacity: 0.05;
+    --name-glow-rgb: 255 125 68; /* big display name */
+    --name-glow-shadow: 0 0 28px rgba(255, 106, 43, 0.45);
+    --on-accent: 8 8 10; /* text/icon sitting ON the ember accent */
+
+    color-scheme: dark;
+  }
+
+  /* ── Light theme (warm paper, same ember family) ────────────────────── */
+  [data-theme='light'] {
+    --ink-950: 244 241 236; /* page background — warm cream */
+    --ink-900: 255 255 255; /* cards */
+    --ink-850: 250 248 244;
+    --ink-800: 240 237 231;
+    --ink-700: 230 226 218;
+    --ink-600: 221 215 205; /* borders / hairlines */
+
+    --ash-400: 138 130 117; /* muted */
+    --ash-300: 96 89 79; /* secondary */
+    --ash-200: 60 55 47;
+    --ash-100: 28 25 21; /* primary — warm near-black */
+
+    /* ember deepened for contrast on a light surface */
+    --ember: 222 74 24;
+    --ember-bright: 196 60 16;
+    --ember-deep: 168 48 12;
+    --ember-glow: 222 74 24;
+
+    --glow-rgb: 255 122 60;
+    --glow-strength: 0.14;
+    --grid-rgb: 40 30 20;
+    --grid-alpha: 0.05;
+    --grain-opacity: 0.035;
+    --name-glow-rgb: 214 66 20;
+    --name-glow-shadow: 0 0 22px rgba(222, 74, 24, 0.22);
+    --on-accent: 255 248 244;
+
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-ash-100 font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  ::selection {
+    background: rgb(var(--ember));
+    color: rgb(var(--on-accent));
+  }
+
+  /* Custom scrollbar — telemetry feel */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--ink-950));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--ink-700));
+    border: 2px solid rgb(var(--ink-950));
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--ember-deep));
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@layer components {
+  /* Atmospheric layers ----------------------------------------------------- */
+
+  /* Fine grid that recedes into the background */
+  .bg-grid {
+    background-image:
+      linear-gradient(
+        to right,
+        rgb(var(--grid-rgb) / var(--grid-alpha)) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgb(var(--grid-rgb) / var(--grid-alpha)) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
+  }
+
+  /* Film grain overlay */
+  .grain::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Ember radial glow */
+  .ember-glow {
+    background: radial-gradient(
+      60% 60% at 50% 40%,
+      rgb(var(--glow-rgb) / var(--glow-strength)) 0%,
+      rgb(var(--glow-rgb) / calc(var(--glow-strength) * 0.32)) 35%,
+      transparent 70%
+    );
+  }
+
+  .mono-label {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.28em] text-ash-400;
+  }
+
+  .hairline {
+    @apply border-t border-ink-600/70;
+  }
+
+  /* Text with an ember underglow for accenting names/words */
+  .text-ember-glow {
+    color: rgb(var(--name-glow-rgb));
+    text-shadow: var(--name-glow-shadow);
+  }
+
+  /* Link underline that wipes in */
+  .link-wipe {
+    position: relative;
+    display: inline-block;
+  }
+  .link-wipe::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: rgb(var(--ember));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .link-wipe:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .card-surface {
+    @apply relative overflow-hidden rounded-xl border border-ink-600/70 bg-ink-850/60 backdrop-blur-sm transition-colors duration-500;
+  }
+  .card-surface:hover {
+    border-color: rgb(var(--ember) / 0.5);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
